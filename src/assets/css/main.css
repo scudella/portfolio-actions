@@ -73,7 +73,7 @@ Global Styles
 body {
   font-family: var(--ff-secondary);
   background: var(--clr-white);
-  color: var(--clr-grey-1);
+  color: var(--clr-grey-0);
   line-height: 1.5;
   font-size: 0.875rem;
   margin-top: 5rem;
@@ -109,7 +109,7 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-3);
+  color: var(--clr-grey-1);
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -191,7 +191,7 @@ p {
   text-align: center;
 }
 .bg-grey {
-  background: var(--clr-grey-10);
+  background: var(--clr-grey-11);
 }
 /* page links */
 
@@ -533,13 +533,13 @@ Services
 }
 .service:hover {
   background: var(--clr-primary-5);
-  color: var(--clr-primary-9);
+  color: var(--clr-primary-10);
 }
 .service:hover p {
-  color: var(--clr-primary-9);
+  color: var(--clr-primary-10);
 }
 .service:hover .underline {
-  background: var(--clr-primary-9);
+  background: var(--clr-primary-10);
 }
 @media screen and (min-width: 676px) {
   .services-center {

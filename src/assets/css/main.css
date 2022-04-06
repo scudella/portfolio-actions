@@ -419,7 +419,7 @@ Hero
   margin-top: -5rem;
   padding-top: 5rem;
   height: 100vh;
-  background: var(--clr-primary-10);
+  background: var(--clr-primary-11);
   position: relative;
 }
 
@@ -434,7 +434,7 @@ Hero
   margin-left: 0;
 }
 .hero-info {
-  background: var(--clr-primary-10);
+  background: var(--clr-primary-11);
 }
 .hero-img {
   display: none;
@@ -446,7 +446,7 @@ Hero
   display: none;
 }
 .hero-info h4 {
-  color: var(--clr-grey-5);
+  color: var(--clr-grey-4);
 }
 .hero-icons {
   justify-items: flex-start;
@@ -479,7 +479,7 @@ Hero
   .hero-img {
     display: block;
     grid-row: 1/1;
-    grid-column: 7/-1;
+    grid-column: 7/-2;
   }
   .hero-img-svg {
     width: 100%;

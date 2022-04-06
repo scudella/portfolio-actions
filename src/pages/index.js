@@ -1,8 +1,12 @@
 import React from "react"
+import Hero from "../components/Hero"
+
 const IndexPage = () => {
   return (
     <>
-      <h1>My portfolio </h1>
+      <main>
+        <Hero />
+      </main>
     </>
   )
 }

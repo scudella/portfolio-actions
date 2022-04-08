@@ -6,9 +6,8 @@ import { Link } from "gatsby"
 
 const query = graphql`
   {
-    allStrapiJob {
+    allStrapiJob(sort: { fields: idx, order: DESC }) {
       nodes {
-        idx
         company
         cpyBtn
         position
@@ -28,9 +27,7 @@ const Jobs = () => {
     allStrapiJob: { nodes: jobs },
   } = data
   const [value, setValue] = React.useState(0)
-  const sortedJobs = jobs.sort((a, b) => (a.idx > b.idx ? -1 : 1))
-  const { company, position, date, desc } = sortedJobs[value]
-  console.log(sortedJobs)
+  const { company, position, date, desc } = jobs[value]
 
   return (
     <section className="section jobs">
@@ -38,8 +35,7 @@ const Jobs = () => {
       <div className="jobs-center">
         {/* btn container */}
         <div className="btn-container">
-          {sortedJobs.map((job, index) => {
-            console.log(job.cpyBtn)
+          {jobs.map((job, index) => {
             return (
               <button
                 key={index}

@@ -11,5 +11,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `http://localhost:1337`,
+        queryLimit: 1000, // Default to 100
+        collectionTypes: [`job`],
+        // singleTypes: [`siteConfig`],
+      },
+    },
   ],
 }

@@ -17,7 +17,7 @@ module.exports = {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
         collectionTypes: [`job`, `project`],
-        // singleTypes: [`siteConfig`],
+        singleTypes: [`about`],
       },
     },
   ],

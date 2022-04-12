@@ -52,6 +52,7 @@ Variables
   --transition: all 0.3s linear;
   --spacing: 0.2rem;
   --radius: 0.25rem;
+  --double-radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
@@ -819,7 +820,6 @@ Pages
 ===============
 */
 
-.project-template-page,
 .projects-page,
 .error-page,
 .about-page,
@@ -845,16 +845,70 @@ Project Template Page
 ===============
 */
 .project-template-page {
-  padding-top: 3rem;
+  padding-top: 2rem;
   text-align: center;
+  background: var(--clr-grey-2);
 }
-.project-template-page h2 {
+.card {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+.card-img {
+  object-fit: cover;
+  border-top-left-radius: var(--double-radius);
+  border-top-right-radius: var(--double-radius);
+}
+.card-info {
+  border-bottom-left-radius: var(--double-radius);
+  border-bottom-right-radius: var(--double-radius);
+  height: 13rem;
+  background: var(--clr-grey-3);
+}
+.card-info h4 {
   text-transform: uppercase;
+  padding-top: 1.25rem;
+  font-size: 1.5rem;
 }
-.project-template-page p {
-  max-width: 35em;
+.card-info p {
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  color: var(--clr-grey-11);
+  text-transform: capitalize;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .card {
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card-info {
+    min-width: 20rem;
+  }
+}
+@media (min-width: 922px) {
+  .card {
+    max-width: 90vw;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1 / span -1;
+    column-gap: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2rem;
+  }
+  .img-container {
+    min-height: 18rem;
+  }
+  .card-img {
+    height: 100%;
+  }
+  .card-info {
+    min-height: 18rem;
+  }
 }
 /*
 ===============

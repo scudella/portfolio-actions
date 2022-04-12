@@ -852,7 +852,6 @@ Project Template Page
 .card {
   margin-left: 1rem;
   margin-right: 1rem;
-  margin-bottom: 1rem;
   padding-bottom: 2rem;
 }
 .card-img {
@@ -878,7 +877,7 @@ Project Template Page
   text-transform: capitalize;
   padding: 0 1rem;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .card {
     max-width: 80vw;
     margin-left: auto;
@@ -888,7 +887,7 @@ Project Template Page
     min-width: 20rem;
   }
 }
-@media (min-width: 922px) {
+@media screen and (min-width: 922px) {
   .card {
     max-width: 90vw;
     display: grid;

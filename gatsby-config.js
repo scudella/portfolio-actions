@@ -1,4 +1,12 @@
 module.exports = {
+  siteMetadata: {
+    title: `Scudella WebDev Portfolio`,
+    description: `Scudella WebDev Portfolio built with GatsbyJS and Strapi`,
+    titleTemplate: `%s | Scudella Portfolio`,
+    url: `https://scudella-portfolio.netlify.app`,
+    twitterUsername: `@scudella`,
+    image: `/mainImage.jpg`,
+  },
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,

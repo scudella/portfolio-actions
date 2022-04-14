@@ -4,6 +4,7 @@ import Services from "../components/Services"
 import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import { graphql } from "gatsby"
+import Seo from "../components/Seo"
 
 const IndexPage = ({ data }) => {
   const {
@@ -12,6 +13,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
+      <Seo title="Home" />
       <main>
         <Hero />
         <Services />

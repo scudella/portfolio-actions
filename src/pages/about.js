@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Title from "../components/Title"
+import Seo from "../components/Seo"
 
 const About = ({ data }) => {
   const {
@@ -9,6 +10,7 @@ const About = ({ data }) => {
   console.log(aboutImage)
   return (
     <>
+      <Seo title="About" />
       <section className="about-page">
         <div className="section-center about-center">
           <img

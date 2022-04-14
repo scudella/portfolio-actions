@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Seo from "../../components/Seo"
 
 const ProjectTemplate = ({ pageContext: { title }, data }) => {
   const {
@@ -8,6 +9,11 @@ const ProjectTemplate = ({ pageContext: { title }, data }) => {
   } = data
   return (
     <>
+      <Seo
+        title={data.strapiProject.title.toUpperCase()}
+        description={data.strapiProject.description}
+        image={data.strapiProject.image.publicURL}
+      />
       <main className="project-template-page">
         <article className="card">
           <div className="img-container">

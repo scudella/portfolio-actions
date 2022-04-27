@@ -908,6 +908,14 @@ Project Template Page
   .card-info {
     min-height: 18rem;
   }
+  .card-img {
+    border-bottom-left-radius: var(--double-radius);
+    border-bottom-right-radius: var(--double-radius);
+  }
+  .card-info {
+    border-top-left-radius: var(--double-radius);
+    border-top-right-radius: var(--double-radius);
+  }
 }
 /*
 ===============

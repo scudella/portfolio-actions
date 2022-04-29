@@ -1,6 +1,6 @@
 import React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
+import { FaGithubSquare, FaShareSquare, FaSearch } from "react-icons/fa"
 import { Link } from "gatsby"
 
 const Project = ({
@@ -15,11 +15,16 @@ const Project = ({
 }) => {
   return (
     <article className="project">
-      <GatsbyImage
-        image={getImage(image.localFile)}
-        className="project-img"
-        alt={title}
-      />
+      <div className="link-container">
+        <GatsbyImage
+          image={getImage(image.localFile)}
+          className="project-img"
+          alt={title}
+        />
+        <Link to={`/projects/${slug}`} className="search-link">
+          <FaSearch />
+        </Link>
+      </div>
       <div className="project-info">
         <span className="project-number">0{index + 1}.</span>
         <Link to={`/projects/${slug}`} className="project-slug">

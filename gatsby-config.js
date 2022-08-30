@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Scudella WebDev Portfolio`,
-    description: `Scudella WebDev Portfolio built with GatsbyJS and Strapi`,
-    titleTemplate: `%s | Scudella Portfolio`,
-    url: `https://scudella-portfolio.netlify.app`,
+    title: `Eduardo Scudeller Libardi Portfolio`,
+    description: `Eduardo Scudeller Libardi WebDev Portfolio built with GatsbyJS and Strapi`,
+    titleTemplate: `%s | Eduardo S. Libardi Portfolio`,
+    siteUrl: `https://portfolio.scudella.net.br`,
+    // siteUrl: `https://scudella-portfolio.netlify.app`,
     twitterUsername: `@scudella`,
-    image: `/mainImage.jpg`,
+    image: `/mainImg.png`,
   },
   plugins: [
     `gatsby-plugin-image`,

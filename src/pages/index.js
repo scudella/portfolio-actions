@@ -13,7 +13,6 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <Seo title="Home" />
       <main>
         <Hero />
         <Services />
@@ -23,6 +22,8 @@ const IndexPage = ({ data }) => {
     </>
   )
 }
+
+export const Head = () => <Seo title="Home" />
 
 export const query = graphql`
   {

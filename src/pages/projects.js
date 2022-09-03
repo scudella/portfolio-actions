@@ -10,7 +10,6 @@ const ProjectsPage = ({
 }) => {
   return (
     <>
-      <Seo title="Projects" />
       <main>
         <section className="projects-page">
           <Projects title="all projects" projects={projects} />
@@ -19,6 +18,8 @@ const ProjectsPage = ({
     </>
   )
 }
+
+export const Head = () => <Seo title="Projects" />
 
 export const query = graphql`
   {

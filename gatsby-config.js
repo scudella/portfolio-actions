@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Eduardo Scudeller Libardi Portfolio`,
-    description: `Eduardo Scudeller Libardi WebDev Portfolio built with GatsbyJS and Strapi`,
-    titleTemplate: `%s | Eduardo S. Libardi Portfolio`,
-    siteUrl: `https://portfolio.scudella.net.br`,
-    // siteUrl: `https://scudella-portfolio.netlify.app`,
+    title: `Eduardo Scudeller Libardi Webdev Portfolio`,
+    description: `Eduardo Scudeller Libardi WebDev Portfolio showing of some frontend and backend projects`,
+    titleTemplate: ` | Eduardo S. Libardi Portfolio`,
     twitterUsername: `@scudella`,
     image: `/mainImg.png`,
+    // siteUrl: `https://scudella-portfolio.netlify.app`,
+    siteUrl: `https://portfolio.scudella.net.br`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -19,7 +19,6 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-strapi`,
       options: {

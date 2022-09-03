@@ -5,7 +5,6 @@ import Seo from "../components/Seo"
 const Error = () => {
   return (
     <>
-      <Seo title="Not Found" />
       <main className="error-page">
         <div className="error-container">
           <h2>not the page you are looking for?</h2>
@@ -17,5 +16,7 @@ const Error = () => {
     </>
   )
 }
+
+export const Head = () => <Seo title="Not Found" />
 
 export default Error

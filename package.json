@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "private": true,
   "description": "portfolio",
   "author": "Eduardo S. Libardi",
@@ -15,16 +15,14 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby": "^4.11.1",
-    "gatsby-plugin-image": "^2.11.1",
-    "gatsby-plugin-react-helmet": "^5.11.0",
-    "gatsby-plugin-sharp": "^4.11.1",
-    "gatsby-source-filesystem": "^4.11.1",
+    "gatsby": "^4.21.1",
+    "gatsby-plugin-image": "^2.22.0",
+    "gatsby-plugin-sharp": "^4.22.0",
+    "gatsby-source-filesystem": "^4.22.0",
     "gatsby-source-strapi": "^1.0.3",
-    "gatsby-transformer-sharp": "^4.11.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0",
-    "react-icons": "^4.3.1"
+    "gatsby-transformer-sharp": "^4.22.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-icons": "^4.4.0"
   }
 }

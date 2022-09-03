@@ -9,11 +9,6 @@ const ProjectTemplate = ({ pageContext: { title }, data }) => {
   } = data
   return (
     <>
-      <Seo
-        title={data.strapiProject.title.toUpperCase()}
-        description={data.strapiProject.description}
-        image={data.strapiProject.image.publicURL}
-      />
       <main className="project-template-page">
         <article className="card">
           <div className="img-container">
@@ -32,6 +27,14 @@ const ProjectTemplate = ({ pageContext: { title }, data }) => {
     </>
   )
 }
+export const Head = ({ location, data }) => (
+  <Seo
+    title={data.strapiProject.title.toUpperCase()}
+    description={data.strapiProject.description}
+    image={data.strapiProject.printScreen.localFile.publicURL}
+    location={location.pathname}
+  />
+)
 
 export const query = graphql`
   query getSingleProject($title: String) {
@@ -45,6 +48,7 @@ export const query = graphql`
       }
       printScreen {
         localFile {
+          publicURL
           childImageSharp {
             gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
           }

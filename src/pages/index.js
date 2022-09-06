@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo title="Eduardo Scudeller Libardi WebDev Portfolio" />
 
 export const query = graphql`
   {

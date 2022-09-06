@@ -62,6 +62,8 @@ const SEO = ({ title, description, image, location, children }) => {
       {twitterUsername && (
         <meta name="twitter:creator" content={seo.twitterUsername} />
       )}
+	<link rel="icon" type="image/ico" sizes="48x48" href="/favicon.ico" />
+
       {children}
     </>
   )

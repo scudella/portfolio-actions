@@ -41,11 +41,6 @@ export const query = graphql`
     strapiProject(title: { eq: $title }) {
       description
       title
-      image {
-        localFile {
-          publicURL
-        }
-      }
       printScreen {
         localFile {
           publicURL

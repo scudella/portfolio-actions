@@ -1,3 +1,9 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+const siteUrl = process.env.MYURL || `https://portfolio.scudella.net.br`
+
 module.exports = {
   siteMetadata: {
     title: `Eduardo Scudeller Libardi Webdev Portfolio`,
@@ -5,8 +11,7 @@ module.exports = {
     titleTemplate: ` | Eduardo S. Libardi Portfolio`,
     twitterUsername: `@scudella`,
     image: `/mainImg.png`,
-    // siteUrl: `https://scudella-portfolio.netlify.app`,
-    siteUrl: `https://portfolio.scudella.net.br`,
+    siteUrl: siteUrl,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -26,6 +31,28 @@ module.exports = {
         queryLimit: 1000, // Default to 100
         collectionTypes: [`job`, `project`],
         singleTypes: [`about`],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }`,
+        resolveSiteUrl: () => siteUrl,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: siteUrl,
+        sitemap: `${siteUrl}/sitemap/sitemap-index.xml`,
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
   ],

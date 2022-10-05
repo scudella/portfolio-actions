@@ -21,7 +21,7 @@ const Project = ({
           className="project-img"
           alt={title}
         />
-        <Link to={`/projects/${slug}`} className="search-link">
+        <Link to={`/projects/${slug}/`} className="search-link">
           <FaSearch />
         </Link>
       </div>

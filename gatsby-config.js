@@ -56,4 +56,5 @@ module.exports = {
       },
     },
   ],
+  trailingSlash: "always",
 }

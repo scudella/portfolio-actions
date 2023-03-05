@@ -7,14 +7,13 @@ const About = ({ data }) => {
   const {
     strapiAbout: { title, aboutImage, info, stack },
   } = data
-  console.log(aboutImage)
   return (
     <>
       <section className="about-page">
         <div className="section-center about-center">
           <img
             // rendering SVG image through publicURL
-            src={aboutImage[0].localFile.publicURL}
+            src={aboutImage.localFile.publicURL}
             alt={title}
             className="about-img-svg"
           />

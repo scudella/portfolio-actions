@@ -23,9 +23,10 @@ jobs:
           # githubToken: ${{ github.token }}
 
           # Set an output parameter `uname` for use in subsequent steps
-        run: |
-          uname -a
-          echo ::set-output name=uname::$(uname -a)
+#        -name: uname
+#         run: |
+#          uname -a
+#          echo ::set-output name=uname::$(uname -a)
         - name: Setup Node.js
           uses: actions/setup-node@v3
           with:
@@ -34,8 +35,8 @@ jobs:
           run: npm ci
         - name: build
           run: npm run build
-        - name: Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+#        - name: Release
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         # run: npm run semantic-release

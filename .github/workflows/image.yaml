@@ -5,16 +5,19 @@ on:
       - main
 jobs:
   aarch_job:
-    name: Build on ubuntu-22.04 aarch
-    runs-on: ubuntu22.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: run on arch
-        uses: uraimo/run-on-arch-action@v2
-        with:
-          arch: aarch64
-          distro: ubuntu22.04
-
+    - name: Build on ubuntu-22.04 aarch
+      runs-on: ubuntu22.04
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v3
+          with:
+            fetch-depth: 0
+        - name: run on arch
+          uses: uraimo/run-on-arch-action@v2
+          with:
+            arch: aarch64
+            distro: ubuntu22.04
+          - name: Setup Node.js
+            uses: actions/setup-node@v3
+            with:
+              node-version: 18

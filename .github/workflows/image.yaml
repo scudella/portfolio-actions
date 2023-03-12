@@ -17,6 +17,6 @@ jobs:
         with:
           arch: aarch64
           distro: ubuntu22.04
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+          uses: actions/setup-node@v3
+          with:
+            node-version: 18

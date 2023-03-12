@@ -1,0 +1,42 @@
+name: aarch_image
+on:
+  push:
+    branches:
+      - main
+jobs:
+  aarch_job:
+    name: Build on ubuntu-22.04 aarch
+    runs-on: ubuntu22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+        uses: uraimo/run-on-arch-action@v2
+        name: Run commands
+        id: runcmd
+        with:
+          arch: aarch64
+          distro: ubuntu22.04
+
+          # Not required, but speeds up builds by storing container images in
+          # a GitHub package registry.
+          # githubToken: ${{ github.token }}
+
+          # Set an output parameter `uname` for use in subsequent steps
+          run: |
+            uname -a
+            echo ::set-output name=uname::$(uname -a)
+          - name: Setup Node.js
+            uses: actions/setup-node@v3
+              with:
+                node-version: 18
+           - name: Install dependencies
+             run: npm ci
+           - name: build
+             run: npm run build
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        # run: npm run semantic-release

@@ -14,7 +14,6 @@ jobs:
           fetch-depth: 0
       - name: run on arch
         uses: uraimo/run-on-arch-action@v2
-        name: Run commands
           id: runcmd
           with:
             arch: aarch64

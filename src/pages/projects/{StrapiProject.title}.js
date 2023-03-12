@@ -1,26 +1,46 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, navigate } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Seo from "../../components/Seo"
+import { FaSearch, FaChevronLeft } from "react-icons/fa"
 
 const ProjectTemplate = ({ pageContext: { title }, data }) => {
   const {
-    strapiProject: { description, printScreen },
+    strapiProject: { description, printScreen, url },
   } = data
   return (
     <>
       <main className="project-template-page">
         <article className="card">
-          <div className="img-container">
-            <GatsbyImage
-              image={getImage(printScreen.localFile)}
-              className="card-img"
-              alt={title}
-            />
+          <div className="link-container-slug">
+            <div className="img-container">
+              <GatsbyImage
+                image={getImage(printScreen.localFile)}
+                className="card-img"
+                alt={title}
+              />
+            </div>
+            <a
+              href={url}
+              target="_blank"
+              rel="noreferrer"
+              className="search-link-slug"
+            >
+              <FaSearch />
+            </a>
           </div>
-          <div className="card-info">
-            <h4>{title}</h4>
-            <p>{description}</p>
+
+          <div className="link-container-slug">
+            <div className="card-info">
+              <h4>{title}</h4>
+              <p>{description}</p>
+              <button
+                onClick={() => navigate(-1)}
+                className="search-link-slug back-link"
+              >
+                <FaChevronLeft />
+              </button>
+            </div>
           </div>
         </article>
       </main>
@@ -41,6 +61,7 @@ export const query = graphql`
     strapiProject(title: { eq: $title }) {
       description
       title
+      url
       printScreen {
         localFile {
           publicURL

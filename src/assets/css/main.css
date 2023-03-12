@@ -573,7 +573,10 @@ Jobs
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 2rem;
   margin-bottom: 3rem;
+  border: var(--clr-grey-10) 2px solid;
+  box-shadow: 5px 8px var(--clr-grey-8);
 }
 .job-btn {
   background: transparent;
@@ -586,6 +589,7 @@ Jobs
   cursor: pointer;
   padding: 0.25rem 0;
   line-height: 1;
+  color: var(--clr-grey-4);
 }
 .job-btn:hover {
   color: var(--clr-primary-4);
@@ -913,6 +917,46 @@ Project Template Page
   text-transform: capitalize;
   padding: 0 1rem;
 }
+.link-container-slug {
+  position: relative;
+  transition: var(--transition);
+  z-index: 1;
+}
+.link-container-slug:hover .search-link-slug {
+  opacity: 1;
+}
+.search-link-slug {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--clr-primary-5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  transition: var(--transition);
+  cursor: pointer;
+  opacity: 0;
+  font-size: 1rem;
+  color: var(--clr-white);
+  z-index: 2;
+}
+.back-link {
+  top: 85%;
+  left: 50%;
+  transform: translate(-85%, -50%);
+  background: var(--clr-grey-2);
+  border-color: transparent;
+}
+.search-link-slug:hover {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+}
+
 @media screen and (min-width: 768px) {
   .card {
     max-width: 80vw;
@@ -937,6 +981,20 @@ Project Template Page
   }
   .img-container {
     min-height: 18rem;
+  }
+  .search-link-slug {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+  }
+  .search-link-slug:hover {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+  }
+  .back-link {
+    top: 75%;
+    transform: translate(-75%, -50%);
   }
   .card-img {
     height: 100%;

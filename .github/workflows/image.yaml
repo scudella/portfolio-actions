@@ -35,5 +35,6 @@ jobs:
           echo $version
       - uses: docker/build-push-action@v4
         with:
+          context: .
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:v${{ vars.version }}

@@ -31,4 +31,4 @@ jobs:
             version=$(awk -F: 'NR==3 { print $2 }' package.json | sed s/\"//g | sed s/,//)
             echo $version
             cd build
-            docker build -t scudella/portfolio:v$(version) .
+            docker build -t scudella/portfolio:v$(echo $version) .

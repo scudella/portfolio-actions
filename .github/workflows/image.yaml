@@ -33,7 +33,6 @@ jobs:
         run: |
           version=$(awk -F: 'NR==3 { print $2 }' package.json | sed s/\"//g | sed s/,//)
           echo $version
-          cd build
       - uses: docker/build-push-action@v4
         with:
           push: true

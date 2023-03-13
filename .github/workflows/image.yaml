@@ -23,7 +23,6 @@ jobs:
       - name: build
         run: npm run build
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           STRAPI_TOKEN: ${{ secrets.STRAPI_TOKEN }}        
           STRAPI_API_URL: ${{ vars.STRAPI_API_URL }}
           MYURL: ${{ vars.MYURL }}

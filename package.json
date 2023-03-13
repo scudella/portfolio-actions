@@ -39,7 +39,6 @@
     "type": "git",
     "url": "https://github.com/scudella/portfolio-actions.git"
   },
-
   "config": {
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"

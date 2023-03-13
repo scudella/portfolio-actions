@@ -37,4 +37,4 @@ jobs:
       - uses: docker/build-push-action@v4
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:v$(echo $version)
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:v${{ vars.version }}

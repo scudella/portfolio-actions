@@ -35,6 +35,11 @@
     "cz-conventional-changelog": "3.3.0",
     "semantic-release": "20.1.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scudella/portfolio.git"
+  },
+
   "config": {
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"

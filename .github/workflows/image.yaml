@@ -21,8 +21,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           STRAPI_TOKEN: ${{ secrets.STRAPI_TOKEN }}        
-          MYURL: ${{ secrets.MYURL }}        
-          STRAPI_API_URL: ${{ secrets.STRAPI_API_URL }}        
       - uses: uraimo/run-on-arch-action@v2
         with:
           arch: aarch64

@@ -29,6 +29,6 @@ jobs:
           distro: ubuntu22.04
           run: |
             cd build
-            version=awk -F: 'NR==3 { print $2 }' package.json | sed s/\"//g | sed s/,//
+            version=$(awk -F: 'NR==3 { print $2 }' package.json | sed s/\"//g | sed s/,//)
             echo $version
             docker build -t scudella/portfolio:v$(version) .

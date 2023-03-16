@@ -20,11 +20,11 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: npm ci
-      - name: Release
+      - name: Semantic Release
         id: semantic
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: npm run semantic-release
+        run: npx semantic-release
       - name: Gatsby build
         run: npm run build
         env:

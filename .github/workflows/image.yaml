@@ -38,11 +38,11 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Check the outputs of semantic release
         run: |
-          echo ${{ steps.semantic.outputs.new_release_published }} 
-          echo ${{ steps.semantic.outputs.new_release_version }}
-          echo ${{ steps.semantic.outputs.new_release_major_version }}
-          echo ${{ steps.semantic.outputs.new_release_minor_version }}
-          echo ${{ steps.semantic.outputs.new_release_patch_version }}
+          echo "new_release_published? ${{ steps.semantic.outputs.new_release_published }}"
+          echo "new release version: ${{ steps.semantic.outputs.new_release_version }}"
+          echo "${{ steps.semantic.outputs.new_release_major_version }}"
+          echo "${{ steps.semantic.outputs.new_release_minor_version }}"
+          echo "${{ steps.semantic.outputs.new_release_patch_version }}"
       - name: Build and push
         id: docker_build
         if: steps.semantic.outputs.new_release_published == 'true'

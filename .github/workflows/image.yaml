@@ -24,7 +24,7 @@ jobs:
         id: semantic
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: npx semantic-release
+        uses: cycjimmy/semantic-release-action@v3
       - name: Gatsby build
         run: npm run build
         env:

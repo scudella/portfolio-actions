@@ -33,9 +33,24 @@
     "commitizen": "4.3.0",
     "cz-conventional-changelog": "3.3.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scudella/portfolio-actions.git"
+  },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "release": {
+    "branches": [
+      "main",
+      "master"
+    ]
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/github"
+  ]
 }

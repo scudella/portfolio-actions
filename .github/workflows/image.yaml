@@ -61,6 +61,3 @@ jobs:
       - name: Image digest
         if: steps.semantic.outputs.new_release_published == 'true'
         run: echo ${{ steps.docker_build.outputs.digest }}
-      - name: Set kubernetes deployment with this image
-        if: steps.semantic.outputs.new_release_published == 'true'
-        run: ssh -i ${{ secrets.OCI_TOKEN }} ${{ secrets.NODE }} kubectl set image deployment/${{ vars.DEPLOY_NAME }} ${{ vars.CONTAINER }}=${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.IMAGE_NAME }}:${{ steps.semantic.outputs.new_release_version }}

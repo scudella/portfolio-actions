@@ -22,6 +22,12 @@ jobs:
         run: npm ci
       - name: Semantic Release
         id: semantic
+        with:
+          branches: |
+            [
+              'master',
+              'main'
+            ]
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         uses: cycjimmy/semantic-release-action@v3
